@@ -3,138 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B+H Hong Kong Leaflet</title>
+  <title>Hong Kong Business Growth Story</title>
   <style>
-    body {
-      font-family: "Segoe UI", Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    /* HEADER */
-    header {
-      position: relative;
-      background: linear-gradient(135deg, #002147, #004080);
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-      overflow: hidden;
-    }
-
-    /* abstract pattern */
-    header::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -30%;
-      width: 160%;
-      height: 100%;
-      background: linear-gradient(60deg, rgba(255,255,255,0.1) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.1) 75%, transparent 75%);
-      background-size: 40px 40px;
-      z-index: 0;
-    }
-
-    /* simulated B+H logo */
-    .logo {
-      font-weight: 800;
-      font-size: 2rem;
-      letter-spacing: 0.05em;
-      background: #fff;
-      color: #000;
-      display: inline-block;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      position: relative;
-      z-index: 1;
-    }
-
-    header h1 {
-      margin: 1rem 0 0.3rem;
-      font-size: 1.8rem;
-      position: relative;
-      z-index: 1;
-    }
-
-    header p {
-      font-size: 1rem;
-      font-weight: 300;
-      position: relative;
-      z-index: 1;
-      margin: 0;
-    }
-
-    /* MAIN CONTENT */
-    main {
-      max-width: 900px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-
-    .block {
-      background: #fff;
-      margin-bottom: 1.5rem;
-      padding: 1.2rem 1rem;
-      border-radius: 8px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    }
-
-    .block p {
-      margin: 0.6rem 0;
-    }
-
-    .highlight {
-      color: #e63946;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #002147;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.4rem;
-      }
-    }
+    body { font-family: "Segoe UI", Arial, sans-serif; background:#f8f9fb; color:#333; line-height:1.7; margin:0; }
+    header { position:relative; background:linear-gradient(135deg,#002147,#004080); color:#fff; text-align:center; padding:3rem 1rem 4rem; overflow:hidden; }
+    header::after { content:""; position:absolute; top:-30%; left:-30%; width:160%; height:160%; background:radial-gradient(circle,rgba(255,255,255,0.12) 0%,transparent 60%); animation:pulse 8s infinite alternate; z-index:0;}
+    @keyframes pulse{from{transform:scale(1);}to{transform:scale(1.1);}}
+    .logo{font-weight:800;font-size:2.2rem;letter-spacing:0.08em;background:#fff;color:#002147;display:inline-block;padding:0.3rem 0.8rem;border-radius:6px;position:relative;z-index:1;}
+    header h1{margin-top:1.5rem;font-size:2rem;position:relative;z-index:1;}
+    header p{font-size:1.1rem;font-weight:300;margin-top:0.5rem;position:relative;z-index:1;}
+    main{max-width:1000px;margin:-2rem auto 3rem;padding:0 1rem;position:relative;z-index:2;}
+    .intro-cards{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:2rem;}
+    .card{flex:1;min-width:180px;background:#fff;padding:1.5rem 1rem;text-align:center;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.08);}
+    .card span{font-size:2rem;}
+    .card h2{font-size:1.1rem;margin-top:0.8rem;color:#004080;}
+    .content{background:#fff;padding:2rem 1.5rem;border-radius:8px;box-shadow:0 3px 10px rgba(0,0,0,0.08);}
+    .columns{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+    .columns h2{font-size:1.2rem;margin-bottom:1rem;color:#004080;}
+    .highlight{color:#e63946;font-weight:bold;}
+    footer{text-align:center;padding:1.2rem;background:#002147;color:#fff;font-size:0.9rem;}
+    .btn-link{display:inline-block;margin-top:1rem;padding:0.5rem 1rem;background:#e63946;color:#fff;text-decoration:none;border-radius:5px;font-size:0.9rem;transition:background 0.3s;}
+    .btn-link:hover{background:#c92f3c;}
+    @media(max-width:700px){.columns{grid-template-columns:1fr;} header h1{font-size:1.5rem;}}
   </style>
 </head>
 <body>
   <header>
     <div class="logo">B+H</div>
-    <h1>Hong Kong: Gateway for Global Success</h1>
-    <p>Business Growth Story</p>
+    <h1>Hong Kong: Gateway for Global Business</h1>
+    <p>Business Growth Story in Hong Kong</p>
   </header>
 
   <main>
-    <div class="block">
-      <p><span class="highlight">Hong Kong</span> attracts world-class talent and offers a dynamic base for global firms.</p>
-      <p><span class="highlight">香港</span>吸引全球顶尖人才，并为国际企业提供动态发展的理想基地。</p>
+    <div class="intro-cards">
+      <div class="card"><span>🌏</span><h2>Connectivity</h2></div>
+      <div class="card"><span>👩‍💼</span><h2>Talent</h2></div>
+      <div class="card"><span>🚀</span><h2>Opportunity</h2></div>
     </div>
 
-    <div class="block">
-      <p><span class="highlight">B+H Architects</span>, a Canadian design firm, opened here in 2012 with one employee; today, more than 20 architects work in its Hong Kong office.</p>
-      <p><span class="highlight">B+H 建筑设计事务所</span>，一家加拿大公司，于 2012 年在港仅一名员工起步；如今团队已扩展至逾 20 名建筑师。</p>
-    </div>
-
-    <div class="block">
-      <p>The firm has expanded into the <span class="highlight">Greater Bay Area</span> with landmark projects such as the Shenzhen Natural History Museum and Shenzhen Children’s Hospital.</p>
-      <p>该事务所已进入<span class="highlight">粤港澳大湾区</span>，承担深圳自然博物馆、深圳儿童医院等标志性项目。</p>
-    </div>
-
-    <div class="block">
-      <p>Supported by Surbana Jurong Group’s global network, B+H benefits from Hong Kong’s connectivity and talent. Its success proves Hong Kong is the <span class="highlight">ideal location</span> for foreign businesses in Asia.</p>
-      <p>依托盛裕集团的全球网络，B+H 受益于香港的连通性和人才优势。其成功表明，香港是海外企业进入亚洲的<span class="highlight">理想基地</span>。</p>
+    <div class="content">
+      <div class="columns">
+        <div>
+          <h2>Our Story</h2>
+          <p>Hong Kong is a gateway for global business, offering <span class="highlight">connectivity</span>, <span class="highlight">talent</span>, and <span class="highlight">opportunity</span>.</p>
+          <p><span class="highlight">B+H Architects</span>, a Canadian design practice, established its Hong Kong presence in 2012 with just one employee. Today, its Hong Kong office has grown into a vibrant studio of more than 20 architects, leading landmark projects in the Greater Bay Area, including the Shenzhen Natural History Museum and the Shenzhen Children’s Hospital.</p>
+          <p>Now part of <span class="highlight">Surbana Jurong Group</span>, B+H advances its global design vision, empowered by Hong Kong’s open business environment — proving the city is the ideal base for international growth in Asia.</p>
+        </div>
+        <div>
+          <h2>我们的故事</h2>
+          <p><span class="highlight">香港</span>是全球商务的门户，集连通力、人才资源和发展机遇于一身。</p>
+          <p>来自加拿大的 <span class="highlight">B+H 建筑设计事务所</span> 于 2012 年在港设点。当时虽只有一名员工，而如今这里已成长为一个拥有二十多位建筑师的活力团队！并且其亦在大湾区主导多个地标项目，包括深圳自然博物馆和深圳儿童医院。</p>
+          <p>加入 <span class="highlight">盛裕集团（Surbana Jurong Group）</span> 后，B+H 继续坚持其国际化设计视野，并在香港开放的营商环境助力下不断前行，印证了香港是国际企业立足和拓展亚洲的理想平台。</p>
+        </div>
+      </div>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 Hong Kong Convention and Exhibition Centre – Success in Hong Kong
+    &copy; 2025 B+H Architects — Success in Hong Kong
+    <br>
+    <a class="btn-link" href="strategy.html">View Revision & Translation Strategy</a>
   </footer>
 </body>
 </html>
