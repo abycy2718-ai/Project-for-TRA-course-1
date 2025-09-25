@@ -1,204 +1,119 @@
-* {
-  box-sizing: border-box;
-}
-
+/* =======================
+   Global Styles
+   ======================= */
 body {
+  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
-  font-family: "Lucida Grande";
+  background: #f4f6f8;   /* light grey background */
+  color: #333;
+  line-height: 1.6;
 }
 
-a {
-  text-decoration: none;
-}
-
-.clear {
-  clear: left;
-}
-
-.container {
-  max-width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
-  background-size: cover;
-  color: white;
-  text-align: center;
-}
-
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
-}
-
-.top-wrapper p {
-  opacity: 0.7;
-  margin-bottom: 3px;
-}
-
-.btn-wrapper {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.btn-wrapper p {
-  margin: 10px 0;
-}
-
-.signup {
-  background-color: #239b76;
-}
-
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
-}
-
-.twitter {
-  background-color: #55acee;
-}
-
-.btn {
-  padding: 12px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
+/* =======================
+   Header Styles
+   ======================= */
 header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34, 49, 52, 0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.menu-icon{
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display: none;
-}
-
-.lesson-wrapper {
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
   position: relative;
+  background: linear-gradient(135deg, #002147, #004080); /* deep corporate blue */
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  overflow: hidden;
 }
 
-.lesson-icon p {
+/* abstract diagonal pattern overlay */
+header::before {
+  content: "";
   position: absolute;
-  top: 44%;
-  width: 100%;
-  color: white;
+  top: 0;
+  left: -30%;
+  width: 160%;
+  height: 100%;
+  background: linear-gradient(
+    60deg,
+    rgba(255,255,255,0.1) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255,255,255,0.1) 50%,
+    rgba(255,255,255,0.1) 75%,
+    transparent 75%
+  );
+  background-size: 40px 40px;
+  z-index: 0;
 }
 
-.text-contents {
-  width: 80%;
+/* simulated “B+H” logo */
+.logo {
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  background: #fff;
+  color: #000;
   display: inline-block;
-  margin-top: 15px;
-  font-size: 15px;
-  color: #b3aeb5;
-}
-
-.heading h3 {
-  font-weight: normal;
-}
-
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0 7px #1a7940;
-}
-
-.message:active {
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
   position: relative;
-  top: 7px;
-  box-shadow: none;
+  z-index: 1;
 }
 
-footer img {
-  width: 125px;
+header h1 {
+  margin: 1rem 0 0.3rem;
+  font-size: 1.8rem;
+  position: relative;
+  z-index: 1;
 }
 
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
+header p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
+/* =======================
+   Main Content Styles
+   ======================= */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* unified leaflet box */
+.leaflet {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.leaflet p {
+  margin: 0.8rem 0;
+}
+
+/* red highlighted text */
+.highlight {
+  color: #e63946;   /* accent brand red */
+  font-weight: bold;
+}
+
+/* =======================
+   Footer Styles
+   ======================= */
 footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+  text-align: center;
+  padding: 1rem;
+  background: #002147;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* =======================
+   Responsive
+   ======================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem; /* adjust heading for phones */
+  }
 }
